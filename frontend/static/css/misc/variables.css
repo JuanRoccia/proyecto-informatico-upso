@@ -1,0 +1,58 @@
+:root {
+  /* Paleta de colores */
+  --color1: rgb(3, 22, 24);
+  --color1-500: rgb(3, 22, 24, 0.5);
+  --color1-700: rgb(3, 22, 24, 0.8);
+  --color1-950: rgb(3, 22, 24, 0.95);
+
+  --color2: rgb(143, 215, 239);
+  --color2-500: rgb(143, 215, 239, 0.5);
+  --color2-900: rgb(143, 215, 239, 0.1);
+
+  --color3: rgb(253, 201, 83);
+  --color3-500: rgb(253, 201, 83, 0.5);
+  --color3-700: rgb(253, 201, 83, 0.7);
+
+  --color-light: rgba(145, 204, 204, 0.18);
+
+  /* Colores bg*/
+  --color-bg-smoth: rgba(0, 0, 0, 0.7);
+  --color-bg: rgb(208, 235, 243);
+
+
+  /* Color de texto */
+  --font-color1: rgba(255, 255, 255, 0.8);
+  --font-color2: var(--color1);
+  /* Otros colores */
+  --color-danger: rgb(250, 122, 144);
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+
+  /* Fuentes */
+  --base-font: "Inter", sans-serif;
+  --alternative-font: "Raleway", sans-serif;
+
+  /* Tamaños */
+  --aside-size: 15%;
+  --base-size-xxxs: 0.7rem;
+  --base-size-xxs: 0.77rem;
+  --base-size-xs: 0.8rem;
+  --base-size:0.89rem;
+  --base-size0: 1.2rem;
+  --base-size1: 1.6rem;
+  --base-size2: 1.8rem;
+  --base-size3: 2rem;
+  --base-size4: 2.2rem;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-light)
+}

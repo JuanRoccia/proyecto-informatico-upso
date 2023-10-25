@@ -1,0 +1,378 @@
+/* Estilos generales del dashboard*/
+.db {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color1);
+  font-family: var(--base-font);
+  font-size: var(--base-size);
+  user-select: none;
+  overflow-x: hidden;
+}
+.container {
+  display: grid;
+
+  min-width: 100%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-rows: 5rem auto;
+  grid-template-columns: var(--aside-size) auto;
+
+  grid-template-areas:
+    "header-aside header"
+    "aside main";
+
+  color: var(--color-info-light);
+}
+
+a {
+  color: var(--color2);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+/* Fin estilos generales*/
+/* Estilos de fuentes para el dashboard*/
+.db h1 {
+  font-weight: 800;
+  font-size: var(--base-size2);
+}
+
+.db h2 {
+  font-weight: 800;
+  font-size: var(--base-size1);
+}
+
+.db h3 {
+  font-size: var(--base-size0);
+}
+
+.db h4 {
+  font-size: var(--base-size-xs);
+}
+
+.db h5 {
+  font-size: var(--base-size-xxs);
+}
+
+small {
+  font-size: var(--base-size-xxs);
+}
+/* Fin estilos de fuentes para el dashboard*/
+
+/* Estilos especificos para el dashboard*/
+.profile-photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text-muted {
+  color: var(--color-info-dark);
+}
+.db p {
+  color: var(--color1-700);
+}
+
+.db b {
+  color: var(--color1);
+}
+
+.primary {
+  color: var(--color2);
+}
+
+.danger {
+  color: var(--color-danger);
+}
+
+.primary {
+  color: var(--color-success);
+}
+
+.warning {
+  color: var(--color-warning);
+}
+/* Fin estilos espicificos del dashboard*/
+/* Estilos del aside */
+.db aside {
+  height: 100vh;
+  background-color: var(--color1);
+}
+
+.db aside .top {
+  background: var(--color1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--base-size1);
+  grid-area: header-aside;
+}
+.db aside .logo {
+  display: flex;
+  gap: var(--base-size-xs);
+}
+.db aside .logo img {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+aside .close {
+  display: none;
+}
+/* Fin estilos del aside */
+/* Estilos del sidebar*/
+
+aside .sidebar {
+  background-color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  height: 89vh;
+  position: relative;
+  top: 3rem;
+  grid-area: aside;
+}
+
+aside h3 {
+  font-weight: 500;
+}
+
+aside .sidebar a {
+  display: flex;
+  color: var(--color-info-dark);
+  margin-left: var(--base-size3);
+  align-items: center;
+  position: relative;
+  height: 5.7rem;
+  transition: all 0.3s ease;
+  gap: var(--base-size0);
+}
+
+aside .sidebar span {
+  font-size: var(--base-size1);
+  transition: all 0.3s ease;
+}
+
+aside .sidebar a:last-child {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+}
+
+aside .sidebar a.active {
+  background: var(--color2);
+  color: var(--color2);
+  margin-left: 0;
+  background-color: var(--color1);
+  border-bottom: 1px solid var(--color2);
+  border: 1px solid var(--color2);
+  border-radius: 5px;
+  box-shadow: 0 0.1rem 0.3rem var(--color2);
+}
+
+aside .sidebar a.active:before {
+  content: "";
+  width: 6px;
+  height: 100%;
+  background: var(--color2);
+  color: var(--color2);
+  
+}
+
+aside .sidebar a.active span {
+  color: var(--color2);
+  margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover {
+  /* background: var(--color-bg); */
+  color: var(--color2);
+}
+
+aside .sidebar a:hover span {
+  margin-left: 1rem;
+}
+/*Fin estilos sidebar*/
+
+/* Header Styles */
+header {
+  grid-area: header;
+  color: var(--color2);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  height: 60px;
+}
+.search-wrapper {
+  border: 1px solid var(--color2);
+  border-radius: 5px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  background-color: var(--color1);
+  box-shadow: 0 0.1rem 0.7rem var(--color2);
+}
+.search-wrapper:hover {
+  box-shadow: none;
+}
+.search-wrapper span {
+  display: inline-block;
+  padding: 0rem 1rem;
+  font-size: var(--base-size3);
+}
+.search-wrapper input {
+  height: 100%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: var(--color1);
+  color: var(--font-color1);
+  font-size: var(--base-size0);
+  box-shadow: 0 0.1rem 0.7rem var(--color2);
+}
+.search-wrapper input:focus {
+  box-shadow: none; /* Eliminar la sombra cuando el input está enfocado */
+}
+
+.user-wrapper {
+  display: flex;
+  align-items: center;
+}
+.user-wrapper span {
+  margin-left: var(--base-size);
+}
+
+.user-wrapper img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+/* End header styles*/
+
+/* Main Styles*/
+main {
+  grid-area: main;
+  margin-top: var(--base-size);
+  max-height: 100vh;
+  min-height: 85vh;
+  overflow-y: scroll;
+}
+main h1{
+  margin-left: 10px;
+  color: var(--font-color1);
+}
+main .date {
+  display: inline-block;
+  background: var(--color3-700);
+  border-radius: 5px;
+  margin-top: 1rem;
+  padding: 0.5rem 1.6rem;
+  margin-left: 10px;
+}
+
+main .date input[type="date"] {
+  background: transparent;
+  color: var(--font-color2);
+  font-size: var(--base-size0);
+}
+
+main .insights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  justify-items: flex-start;
+  color: var(--font-color1);
+  margin-left: 10px;
+}
+
+main .insights > div {
+  background: var(--color1);
+  padding: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--color2);
+  margin-top: 1rem;
+  box-shadow: 0 0.1rem 0.7rem var(--color2);
+  transition: all 0.3s ease;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+main .insights > div:hover {
+  box-shadow: none;
+}
+
+main .insights > div span {
+  background: var(--color3);
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--color1);
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+main .insights small {
+  color: var(--color3);
+}
+/* End Main Styles */
+
+/* Table Styles */
+main .table-wrapper {
+  margin-top: 2rem;
+}
+
+main .table-wrapper h2 {
+  margin-bottom: 0.8rem;
+  margin-left: 10px;
+  font-size: var(--base-size4);
+  color: var(--font-color1);
+}
+
+main .table-wrapper table {
+  background-color: var(--color2-900);
+  width: 98%;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 0.1rem 0.7rem var(--color2);
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+  color: var(--font-color1);
+}
+
+main .table-wrapper table:hover {
+  box-shadow: none;
+}
+
+main .table-wrapper table thead {
+  font-size: var(--base-size2);
+  border-radius: 50px;
+  background: var(--color1);
+  border-bottom: 1px solid var(--color2-900);
+}
+main .table-wrapper table thead tr th{
+  border-bottom: 1px solid var(--color2);
+}
+
+main table tbody td {
+  height: 2.8rem;
+  border-bottom: 1px solid var(--color2-900);
+  color: var(--font-color1);
+  font-size: var(--base-size0);
+}
+
+main a{
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+
+}
+
+
+/* End Table */

@@ -1,0 +1,87 @@
+/* ESTILOS DEL FORMULARIO LOGIN */
+.register-box {
+  width: 320px;
+  height: 420px;
+  background: var(--color1-950);
+  color: var(--font-color1);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+  border-radius: 15px;
+  /* box-shadow: 5px 5px 10px rgba(200, 200, 200, 0.5);  */
+}
+
+.register-box .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.register-box h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: var(--base-size4);
+}
+
+.register-box h2 {
+  text-align: center;
+}
+
+.register-box label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+}
+
+.register-box input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.register-box input[type="text"],
+.register-box input[type="password"],
+.register-box input[type="email"] {
+  border: none;
+  border-bottom: 1px solid var(--font-color1);
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: var(--font-color1);
+  font-size: var(--base-size1);
+}
+
+.register-box input[type="button"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: var(--color2-500);
+  color: var(--font-color1);
+  font-size: var(--base-size2);
+  border-radius: 20px;
+}
+.register-box input[type="button"]:hover {
+  cursor: pointer;
+  background: var(--color3-700);
+  color: var(--font-color2);
+}
+
+.register-box a {
+  text-decoration: none;
+  font-size: var(--base-size0);
+  line-height: 20px;
+  color: var(--color2-500);
+  font-weight: bold;
+}
+
+.register-box a:hover {
+  color: var(--font-color1);
+}
+/* FIN ESTILOS DEL FORMULARIO LOGIN */

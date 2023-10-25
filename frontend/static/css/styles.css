@@ -1,0 +1,12 @@
+/* FUENTES */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap");
+
+/* MISCELANEOUS */
+@import url("./misc/variables.css");
+@import url("./misc/normalize.css");
+
+/* PAGINAS */
+@import url("./pages/index.css");
+@import url("./pages/dashboard.css");
+@import url("./pages/register.css");
+@import url("./pages/products.css");

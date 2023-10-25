@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos</title>
+
+    <!-- ICONOS  Y  MATERIALES -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp"
+    />
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+
+    <!-- CSS PROPIO -->
+    <link rel="stylesheet" href="../static/css/styles.css" />
+  </head>
+  <body class="db">
+    <div class="container">
+      <!-- ASIDE -->
+      <aside>
+        <div class="top">
+          <a href="dashboard.html">
+            <div class="logo">
+              <img src="../static/img/logo_python2.png" alt="Logo" />
+              <h2>UpsoFullStackDev</h2>
+            </div>
+            <div class="close" id="close-btn">
+              <span class="material-symbols-sharp"> close </span>
+            </div>
+          </a>
+        </div>
+
+        <div class="sidebar">
+          <a href="./dashboard.html" data-view="dashboard">
+            <span class="material-symbols-sharp"> dashboard </span>
+            <h3>Panel</h3>
+          </a>
+          <a href="" data-view="clients">
+            <span class="material-symbols-sharp"> groups </span>
+            <h3>Clientes</h3>
+          </a>
+          <a href="">
+            <span class="material-symbols-sharp"> receipt_long </span>
+            <h3>Facturas</h3>
+          </a>
+          <a href="./products.html" data-view="products" class="active">
+            <span class="material-symbols-sharp"> inventory </span>
+            <h3>Productos</h3>
+          </a>
+          <a href="">
+            <span class="material-symbols-sharp"> design_services </span>
+            <h3>Servicios</h3>
+          </a>
+          <a href="">
+            <span class="material-symbols-sharp"> settings </span>
+            <h3>Configuración</h3>
+          </a>
+          <a href="">
+            <span class="material-symbols-sharp"> logout </span>
+            <h3>Salir</h3>
+          </a>
+        </div>
+      </aside>
+      <!-- FIN ASIDE -->
+
+      <!-- HEADER -->
+      <header>
+        <h1>Bienvenido Usuario</h1>
+
+        <div class="search-wrapper">
+          <input type="search" placeholder="Buscar" />
+          <span class="material-symbols-sharp"> search </span>
+        </div>
+        <div class="user-wrapper">
+          <img src="../static/img/logo_python2.png" alt="Logo" />
+        </div>
+      </header>
+      <!-- FIN HEADER -->
+
+      <!-- MAIN CONTENT -->
+      <main class="main-products">
+        <!-- TABLA DE CLIENTES -->
+        <div class="table-wrapper">
+          <div class="tb-products">
+            <h2>Productos</h2>
+
+            <button
+              
+              type="button"
+              class="myButton"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              >+ Agregar Producto</button
+            >
+          </div>
+          <!-- Button trigger modal -->
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+          >
+            <div
+              class="modal-dialog"
+              style="
+                box-shadow: 0 0.1rem 0.7rem var(--color2);
+                border-radius: 10px;
+              "
+            >
+              <div class="modal-content">
+                <div
+                  class="modal-header"
+                  style="background-color: var(--color1)"
+                >
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Agregar Producto
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    style="background-color: var(--color2)"
+                  ></button>
+                </div>
+                <div class="modal-body" style="background-color: var(--color1)">
+                  <form class="product-form">
+                    <div>
+                      <label for="name">Nombre del Producto: </label>
+                      <input type="text" id="name" name="name" />
+                    </div>
+                    <div>
+                      <label for="price">Precio: </label>
+                      <input type="number" id="price" name="price" />
+                    </div>
+                    <div>
+                      <label for="stock">Stock: </label>
+                      <input type="number" id="stock" name="stock" />
+                    </div>
+                    <div>
+                      <label for="description">Descripción: </label>
+                      <textarea id="description" name="description"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div
+                  class="modal-footer"
+                  style="background-color: var(--color1)"
+                >
+                  <button
+                    type="button"
+                    class="myButton"
+                    id="btn-agregar-producto"
+                  >
+                    Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody id="product-table"></tbody>
+          </table>
+          <a href="#">Ver todos</a>
+        </div>
+        <!-- FIN TABLA DE CLIENTES -->
+      </main>
+    </div>
+  </body>
+
+  <script type="module" src="../static/js/scripts/products.js"></script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"
+  ></script>
+
+</html>

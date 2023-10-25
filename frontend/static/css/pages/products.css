@@ -1,0 +1,108 @@
+/* Buttons */
+.tb-products {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 99%;
+  height: 70px;
+}
+.myButton {
+  background: linear-gradient(to bottom, var(--color1) 5%, var(--color2) 100%);
+  background-color: var(--color1);
+  border-radius: 5px;
+  border: 1px solid var(--color2-500);
+  cursor: pointer;
+  color: var(--font-color1);
+  font-size: var(--base-size1);
+  padding: var(--base-size-xxxs);
+  text-decoration: none;
+  box-shadow: 0 0.1rem 0.7rem var(--color2);
+}
+
+.myButton:hover {
+  background: linear-gradient(to bottom, var(--color2) 5%, var(--color1) 100%);
+  background-color: #019ad2;
+  box-shadow: none;
+}
+
+.myButton:active {
+  position: relative;
+  top: 1px;
+  box-shadow: 0 0.1rem 0.7rem var(--color2);
+}
+
+.btn-edit {
+  color: var(--color3);
+  
+}
+.btn-delete {
+  color: var(--color-danger);
+  
+}
+.btns{
+  display: inline-flex;
+  width: 25px;
+  height: 1px;
+}
+/* End Buttons*/
+
+/* Modal */
+.product-form {
+  display: flex;
+  font-size: var(--base-size0);
+  flex-direction: column;
+  color: var(--font-color1);
+}
+
+.product-form div {
+  margin: 5px;
+}
+
+.product-form label {
+  width: 150px; /* Ajusta el ancho del label según tus necesidades */
+  text-align: right;
+  padding-right: 10px;
+}
+
+.product-form textarea,
+.product-form input[type="text"],
+.product-form input[type="number"] {
+  border: none;
+  border-bottom: 1px solid var(--font-color1);
+  background: transparent;
+  outline: none;
+  height: 40px;
+  width: 300px;
+  color: var(--font-color1);
+  font-size: var(--base-size1);
+}
+
+.product-form input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: var(--color2-500);
+  color: var(--font-color1);
+  font-size: var(--base-size2);
+  border-radius: 20px;
+}
+.product-form input[type="submit"]:hover {
+  cursor: pointer;
+  background: var(--color3-700);
+  color: var(--font-color2);
+}
+/* Estilos para campos autocompletados */
+.product-form input:-webkit-autofill,
+.product-form textarea:-webkit-autofill,
+.product-form input:-webkit-autofill:hover,
+.product-form textarea:-webkit-autofill:hover,
+.product-form input:-webkit-autofill:focus,
+.product-form textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(
+    --font-color1
+  ) !important; /* Cambiar el color del texto */
+  transition: background-color 5000s ease-in-out 0s; /* Controlar la transición de fondo */
+  background-color: transparent !important; /* Cambiar el fondo */
+}
+
+/* End Modal*/
